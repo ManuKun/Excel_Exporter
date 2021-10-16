@@ -70,7 +70,7 @@ const client = new graphql.GraphQLClient("https://api.github.com/graphql", {
 
 const query = `{
   repository(owner: "${argv.owner}", name: "${argv.repo}") {
-    issues(last: 50, states: close) {
+    issues(last: 100, states: close) {
       edges {
         node {
           title
