@@ -7,6 +7,10 @@ const fileName = argv.filename || "issues.csv";
 
 // The Following columns will be displayed "state","author","body","url","milestone","label","comment_body","comment_createdAt","comment_author","comment_author_resource_path","comment_author_url"
 const fields = [
+  {
+    value: "node.title",
+    label: "title"
+  },
  
   {
     value: "node.state",
@@ -65,6 +69,7 @@ const query = `{
     issues(last: 50, states: close) {
       edges {
         node {
+          title
           state
           author {
             login
