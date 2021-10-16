@@ -11,6 +11,10 @@ const fields = [
     value: "node.title",
     label: "title"
   },
+  {
+    value: "node.number",
+    label: "number"
+  },
  
   {
     value: "node.state",
@@ -70,6 +74,7 @@ const query = `{
       edges {
         node {
           title
+          number
           state
           author {
             login
